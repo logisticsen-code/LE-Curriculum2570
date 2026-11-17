@@ -4,7 +4,6 @@ import { PROGRAM } from "../generated/program.js";
 import { YLO_INTRO } from "../generated/outcomes.js";
 import { ISSUES } from "../generated/issues.js";
 import { Section, MajorTag, Warn } from "./ui.jsx";
-import CoverArt from "../CoverArt.jsx";
 import { useMajor } from "../major.jsx";
 import { GROUPS, PLOS, YLOS, YEAR_COLOR, majorsOf } from "../lib.js";
 
@@ -44,7 +43,10 @@ export default function Home() {
             <Link className="btn" to="/plo">PLO 13 ข้อ</Link>
           </div>
           </div>
-          <div className="hero-art"><CoverArt /></div>
+          <div className="hero-art">
+            <img className="cover-art academic-cover" src="/logistics-lab-hero.jpg" width="1536" height="1024"
+              fetchPriority="high" alt="ภาพจำลองนักศึกษาและอาจารย์ศึกษาการไหลของวัสดุด้วยชุดทดลองสายพานลำเลียง" />
+          </div>
         </div>
       </section>
 
