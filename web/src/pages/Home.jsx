@@ -44,9 +44,8 @@ export default function Home() {
           </div>
           </div>
           <div className="hero-art">
-            <img className="cover-art academic-cover" src="/ksu-logistics-cover.png" width="941" height="806"
-              fetchPriority="high" alt="ภาพประชาสัมพันธ์ปีการศึกษา 2565 ของสาขาวิศวกรรมโลจิสติกส์ มหาวิทยาลัยกาฬสินธุ์" />
-            <p className="hint">ภาพประชาสัมพันธ์จากปีการศึกษา 2565</p>
+            <img className="cover-art academic-cover" src="/ksu-logistics-cover.jpg" width="1024" height="759"
+              fetchPriority="high" alt="นักศึกษาวิศวกรรม มหาวิทยาลัยกาฬสินธุ์ ทำงานกลุ่มบนโต๊ะเขียนแบบ" />
           </div>
         </div>
       </section>
