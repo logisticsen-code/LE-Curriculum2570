@@ -2,6 +2,16 @@ import { PageHead, Section, MajorTag } from "./ui.jsx";
 import { FACULTY } from "../generated/program.js";
 import { useMajor } from "../major.jsx";
 
+const portraits = {
+  1: "piyanat",
+  2: "pornsiri",
+  3: "ratchada",
+  4: "arjaree",
+  5: "krissada",
+  6: "nutthanan",
+  7: "savalee",
+};
+
 /* แยกช่องที่เล่มเขียนหลายคุณวุฒิต่อกันในเซลล์เดียว เช่น "วศ.ม. (…) วศ.บ. (…)" */
 const splitDeg = s => s.split(/\s(?=(?:วศ\.|วท\.|ปร\.|Ph\.D\.|M\.Sc\.|M\.Eng\.|B\.Eng\.|D\.Eng\.))/).filter(Boolean);
 const splitInst = s => s.split(/\s(?=(?:ม\.|U\. of|Saga U\.))/).filter(Boolean);
@@ -36,7 +46,12 @@ export default function Faculty() {
               return (
                 <article key={f.no} className={"faccard" + (f.chair ? " is-chair" : "")}>
                   <div className="facid">
-                    <div className="facavatar">{f.name.replace(/^(นาย|นางสาว|นาง)/, "").trim().charAt(0)}</div>
+                    {portraits[f.no] ? (
+                      <img className="facportrait" src={`/faculty/${portraits[f.no]}.jpg`}
+                        width="80" height="100" loading="lazy" decoding="async" alt="" />
+                    ) : (
+                      <div className="facavatar" aria-hidden="true">{f.name.replace(/^(นาย|นางสาว|นาง)/, "").trim().charAt(0)}</div>
+                    )}
                     <div className="facname">
                       <b>{f.name}</b>
                       <span>{f.position.replace("(ประธานหลักสูตร)", "").trim()}</span>
