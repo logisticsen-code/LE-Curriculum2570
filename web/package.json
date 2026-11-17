@@ -1,0 +1,25 @@
+{
+  "name": "le-curriculum-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "เว็บหลักสูตร วศ.บ. วิศวกรรมโลจิสติกส์ (ปรับปรุง 2570) มหาวิทยาลัยกาฬสินธุ์ — โครงสร้าง แผนการเรียน PLO/YLO/CLO แยกวิชาเอก IE/SC",
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "predev": "npm run data",
+    "dev": "vite",
+    "prebuild": "npm run data",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dagre": "^0.8.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

@@ -1,0 +1,79 @@
+.obe-flow-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+.obe-flow-controls [role="group"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.obe-flow-controls button,
+.obe-flow-controls select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: var(--ink);
+  background: var(--card);
+  font: inherit;
+}
+.obe-flow-controls button { cursor: pointer; }
+.obe-flow-controls button[aria-pressed="true"] {
+  background: var(--soft);
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+.obe-flow-controls select { max-width: min(290px, 65vw); }
+.obe-flow-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.obe-flow-legend span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+.obe-flow-scroll {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+.obe-flow-scroll svg {
+  display: block;
+  max-width: none;
+}
+.obe-flow-scroll text {
+  fill: var(--ink);
+  font-size: 11px;
+  pointer-events: none;
+}
+.obe-flow-scroll .obe-flow-heading { font-size: 14px; font-weight: 700; }
+.obe-flow-scroll foreignObject { pointer-events: none; }
+.obe-flow-label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font-size: 12px;
+}
+.obe-flow-label span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.obe-flow-node { fill: var(--card); stroke: var(--line); }
+.obe-flow-scroll a:hover .obe-flow-node,
+.obe-flow-scroll a:focus-visible .obe-flow-node { stroke: var(--accent-ink); }
+.obe-flow-ribbon { opacity: .42; }
+.obe-flow-ribbon[data-active="false"] { opacity: .1; }
+.obe-flow-ribbon:hover { opacity: .75; }
